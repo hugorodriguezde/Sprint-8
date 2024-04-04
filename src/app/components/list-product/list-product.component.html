@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo">LLISTA DE PRODUCTES</span>
+          <button class="btn btn-success float-end" routerLink="/crear-producte">NOU</button>
+          @if(products.length > 0){
+          <table class="table table-striped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Producte</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Preu</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              @for(product of products; track product){
+              <tr>
+                <td> {{ product.name }}</td>
+                <td> {{ product.category }}</td>
+                <td> {{ product.price | currency: 'EUR'}} </td>
+                <td>
+                  <i [routerLink]="['/edit-product', product._id]" class="fas fa-solid fa-pen-to-square text-primary"></i>
+                  <i (click)="deleteProduct(product._id)" class="fas fa-solid fa-trash text-danger"></i>
+                </td>
+              </tr>
+            }
+            </tbody>
+          </table>
+        }
+        @else{
+          <h5 class="empty">No hi ha productes per a mostrar</h5>
+        }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
