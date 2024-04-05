@@ -17,5 +17,4 @@ export class MapService {
     return this.http.get<MapInterface[]>(this.myAppUrl + this.myApiUrl + 'getLocations');
   }
 
-  
 }

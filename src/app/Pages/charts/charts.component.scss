@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // This will align the charts vertically
+  height: 100vh; // This will make the container take the full height of the viewport
+}
+
+.chart {
+  width: 45%; // This will make the charts bigger
+  height: 80%; // This will make the charts bigger
+}

@@ -27,7 +27,7 @@ export class ListProductComponent implements OnInit {
     .pipe(
       tap(products => {
         this.products = products;
-        console.log(this.products); 
+        console.log(this.products);
       }),
       catchError(error => {
         console.error('Error fetching products:', error);
