@@ -17,11 +17,5 @@ export class MapService {
     return this.http.get<MapInterface[]>(this.myAppUrl + this.myApiUrl + 'getLocations');
   }
 
-  deleteLocation(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.myAppUrl}${this.myApiUrl}${id}`);
-  }
-
-  saveLocation(location: MapInterface): Observable<MapInterface> {
-    return this.http.post<MapInterface>(`${this.myAppUrl}${this.myApiUrl}saveLocation`, location);
-  }
+  
 }
