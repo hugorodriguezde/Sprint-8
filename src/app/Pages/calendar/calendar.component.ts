@@ -60,6 +60,18 @@ export class CalendarComponent implements OnInit{
     });
   }
 
+  refreshEvents() {
+    this.CalendarService.getListDates().subscribe((data: CalendarInterface[]) => {
+      const events: EventInput[] = data.map(event => ({
+        id: String(event._id),
+        title: event.title,
+        start: new Date(event.date),
+        end: new Date(event.date),
+      }));
+
+      this.calendarOptions.events = events;
+    });
+  }
 
   handleDateSelect(selectInfo: DateSelectArg) {
     const title = prompt('Introdueix el nom del event:');
@@ -82,12 +94,9 @@ export class CalendarComponent implements OnInit{
 
       this.CalendarService.saveDate(newEvent).subscribe((response: any) => {
         console.log(`L'event s'ha enregistat correctament`, response);
+        this.refreshEvents();
       }, (error: any) => {
         console.error(`Ha ocorregut un error al guardar l'event:`, error);
-        const event = calendarApi.getEventById(String(newEvent._id));
-        if (event) {
-          event.remove();
-        }
       });
     }
   }
