@@ -1,27 +1,45 @@
-# Sprint8
+#  🎨 ImproCode 🎨
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+## 📃 Descripción
 
-## Development server
+ImproCode es una aplicación en Angular que proporciona una plataforma para administrar productos. Permite a los usuarios crear, actualizar y eliminar productos, cada uno con sus propios detalles únicos. La aplicación también incluye funciones para visualizar datos de productos a través de varios gráficos, una vista de calendario y un mapa con localizaciones guardadas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El proyecto utiliza una variedad de tecnologías que incluyen Angular para la interfaz, RxJS para manejar operaciones asincrónicas y Chart.js para la visualización de datos. También incluye una función de mapa impulsada por Mapbox.
 
-## Code scaffolding
+Este proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) versión 17.0.9.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🖥 Demostración
+![CRUD](https://github.com/hugorodriguezde/Sprint-8/blob/main/src/assets/img/CRUDS8.png)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Map](https://github.com/hugorodriguezde/Sprint-8/blob/main/src/assets/img/mapS8.png)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Calendar](https://github.com/hugorodriguezde/Sprint-8/blob/main/src/assets/img/calendarS8.png)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Charts](https://github.com/hugorodriguezde/Sprint-8/blob/main/src/assets/img/GraficsS8.png)
 
-## Further help
+## 💻  Como compilar el proyecto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clona el repositorio [CRUDApi](https://github.com/hugorodriguezde/CRUD-Api) y sigue las instrucciones del README para iniciar el server del Back-end.
+2. Clona este repositorio con `git clone https://github.com/hugorodriguezde/Sprint-8.git`.
+3. Dentro del directorio donde se ha clonado el repositorio ejecuta `npm install` en el terminal para instalar todas las dependencias.
+4. Dentro del directorio ejecuta el comando `ng serve` en el terminal.
+5. Navega a `http://localhost:4200/` para visualizar el proyecto .
+
+
+
+## 🛠️ Tecnologías utilizadas
+
+- Angular (Version 17.0.9)
+- TypeScript
+- HTML/SCSS
+- Bootstrap
+- API REST
+- Chart.js
+- MapBox
+- FullCalendarjs
+- Rxjs
+
+
